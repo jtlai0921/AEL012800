@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch4_1_5.htm</title>
+<script language="JavaScript">
+// number㎝boolean把计肚
+function funcA(c, b){
+   c++;
+   b = false;
+   document.write("funcA :"+c+"/"+b+"<br/>");
+}
+// object肚㎝﹃把计肚
+function funcB(objA, a){
+   objA.name = "辰";
+   a = "朝す城";
+   document.write("funcB : "+objA.name+"/"+a+"<br/>");
+}
+</script>
+</head>
+<body>
+<h2>代刚肚㎝肚ㄧ计㊣</h2>
+<hr/>
+<script language="JavaScript">
+// 跑计
+var c = 1;        // 计
+var b = true;     // ガ狶
+var a = "朝穦"; // ﹃
+var objA = new Object();  // ミン龟ㄒ
+objA.name = "朝穦";
+document.write("㊣funcA玡 : "+c+"/"+b+"<br/>");
+funcA(c,b);  // ㊣ㄧ计
+document.write("㊣funcA : "+c+"/"+b+"<br/>");
+document.write("㊣funcB玡 : "+objA.name+"/"+a+"<br/>");
+funcB(objA, a);  // ㊣ㄧ计
+document.write("㊣funcB : "+objA.name+"/"+a+"<br/>");  
+</script>
+</body>
+</html>    

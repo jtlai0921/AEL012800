@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title>Ch6_6_2.htm</title>
+<script language="JavaScript">
+function printChilds(objNode) {
+   var strMsg = "節點名稱 =" + objNode.nodeName + "\n";
+   if (objNode.hasChildNodes()) {
+      var nodeCount = objNode.children.length;
+      strMsg += "子元素數 = " + nodeCount + "\n";
+      for (var i = 0; i < nodeCount; i++)
+         strMsg += "標籤名稱 = " + objNode.children[i].nodeName + "\n";
+      alert(strMsg);
+   }
+}
+function deleteChild(objParent, objNode) {
+   var strMsg = "刪除標籤 = " + objNode.nodeName + "\n";
+   strMsg += "刪除標籤的子節點數  = " + objNode.children.length + "\n";
+   objParent.removeChild(objNode);
+   alert(strMsg); 
+}
+</script>
+</haed>
+<body id="myBody">
+<h2>刪除DOM節點樹的節點</h2>
+<hr/>
+<div id="myDiv">
+<p><span>段落一</span></p>
+<p id="myP2"><span>段落二</span></p>
+<p id="myP3"><span>段落三</span></p>
+</div>
+<form>
+<script language="JavaScript">
+var d = document.getElementById("myDiv");
+var p2 = document.getElementById("myP2");
+var p3 = document.getElementById("myP3");
+</script>
+<input type="button" value="顯示子節點" onclick="printChilds(d);">
+<input type="button" value="刪除元素1" onclick="deleteChild(d, p2);">
+<input type="button" value="刪除元素2" onclick="deleteChild(d, p3);">
+</form>
+</body>
+</html>

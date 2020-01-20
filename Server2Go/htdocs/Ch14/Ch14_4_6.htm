@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch14_4_6.htm</title>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('a.tabs').click(function() {
+      $.ajax({
+        type: 'GET',
+        url:  'postDateTime.php',
+        error: function() {
+           alert("載入網頁錯誤!");
+        },        
+        success: function(data) {
+           alert("載入網頁成功!");            
+        } 
+      });    
+      return false;
+   });
+   $('#msg').ajaxError(function(event, request, settings) {
+      $(this).html('載入網頁錯誤: ' + settings.url + '!');
+   });
+});
+</script>
+</head>
+<body>
+<a href="#" class="tabs">載入網頁</a>
+<div id="msg"></div>
+</body>
+</html>

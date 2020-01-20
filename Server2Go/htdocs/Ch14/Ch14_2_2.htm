@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch14_2_2.htm</title>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {    
+   $('a.tabs').click(function(event) {
+      var url = $(this).attr('href');
+      $('.content').html('<p>載入中....</p>')
+      .load(url, function(data, status, response) {
+         $('.status').html(status);
+         if (response.status == 404 || 
+            response.status == 500 ) {
+            $('.content').html('<p>錯誤: 載入文件錯誤...</p>');
+         }
+      });    
+      event.preventDefault();
+   });
+});
+</script>
+</head>
+<body>
+<a href="PHP.htm" class="tabs">PHP</a>
+<a href="HTML.htm" class="tabs">HTML</a><br/>
+<div class="status"></div>
+<div class="content"></div>
+</body>
+</html>

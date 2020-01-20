@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch9_2_4.htm</title>
+<style type="text/css">
+.blue { color: blue; }
+.red { color: red; }
+.green { color: green; }
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('.item-3, .item-5, #book6, p').addClass('blue');
+   $('li#book1').addClass('red');
+   $('li.item-2').addClass('green');
+});
+</script>
+</head>
+<body>
+<ol id="list">
+  <li id="book1" class="item-1">JavaScript網頁設計</li>
+  <li id="book2" class="item-2">jQuery網頁設計</li>
+  <li id="book3" class="item-3">ASP.NET網頁設計</li>
+  <li id="book4" class="item-4">PHP網頁設計</li>
+  <li id="book5" class="item-5">JSP網頁設計</li>
+  <li id="book6" class="item-6">Flash網頁設計</li>  
+</ol>
+<p>Mobile網頁設計</p>
+</body>
+</html>

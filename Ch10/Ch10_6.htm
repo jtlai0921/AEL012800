@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch10_6.htm</title>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+var maxChar = 100;
+$(document).ready(function() {
+   $('#counter').text(maxChar);
+   $('#memo').keydown(function(event) {
+      var msg = $(this).val();
+      var numChar = msg.length;
+      var charRemain = maxChar - numChar;
+      if (numChar <= maxChar) {
+         $('#counter').text(charRemain);
+      }
+      else {
+         event.preventDefault();
+      }
+   });  
+});
+</script>
+</head>
+<body>
+<p>你還可以輸入 
+<span id="counter"></span> 個中文字或英文字元</p>
+<textarea id="memo" cols="50" rows="5"></textarea>
+</body>
+</html>

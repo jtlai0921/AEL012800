@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch14_3.htm</title>
+<style type="text/css">
+.hover {
+   cursor : pointer;
+   background-color : yellow;
+}
+</style> 
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('a').click(function(event) {
+      $.getScript("Ch14_3.js", function() {
+          alert("JavaScript特效已經載入和執行.");
+      });  
+      event.preventDefault();
+   });
+});
+</script>
+</head>
+<body>
+<a href="#">新增特效</a>
+<h3>JavaScript</h3>
+<hr/>
+<p id="description">JavaScript原為Netscape Communication 
+ Corporation（網景公司）開發的腳本語言，
+ 提供該公司瀏覽器產品Netscape Navigator
+ 開發互動網頁的功能。</p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch5_6_2.htm</title>
+</head>
+<body>
+<h2>JavaScript多層的例外處理架構</h2>
+<hr/>
+<script language="JavaScript">
+var x = 1;
+// 第一層例外處理
+try {
+   // 第二層例外處理
+   try {
+      if(x == 0)
+         // 程式產生的錯誤訊息   
+         throw "x等於零";   
+      else
+         x = y;
+   }
+   catch(e) {
+       // 第二層的例外處理, 處理程式產生的錯誤
+       if(e == "x等於零"){
+           document.write("第二層的例外處理 : <br/>");
+           document.write("自訂的錯誤說明: " + e + "<br/>"); 
+       }
+       else  
+           // 非內部處理的例外
+           throw e;  // 丟到外層的例外處理 
+   }   
+}
+catch(e) {
+   // 第一層的例外處理, JavaScript的執行錯誤
+   document.write("第一層的例外處理 : <br/>");   
+   document.write("錯誤碼: " + (e.number & 0xFFFF) + "<br/>");
+   document.write("錯誤說明: " + e.description + "<br/>");
+}
+finally {
+   // 顯示測試值
+   document.write("<hr/>測試值x = " + x + "<br/>");
+}
+</script>
+</body>
+</html>

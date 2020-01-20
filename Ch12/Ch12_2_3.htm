@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch12_2_3.htm</title>
+<style type="text/css">
+.yellow { background-color : yellow; }
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+function openNewWindow() {
+   $('a[href^="http://"]').attr('target', '_blank');
+}
+$(document).ready(function() {
+   openNewWindow();
+   $('a').click(function() {
+      $(this).addClass('yellow');    
+   });
+});
+</script>
+</head>
+<body>
+<div class="content">
+	<div class="navigation">
+	<ul id="mainNav">
+    <li><a href="http://www.google.com">Google谷哥</a></li>
+    <li><a href="http://www.yahoo.com.tw">Yahoo!奇摩</a></li>
+    <li><a href="http://www.hinet.net">中華電信</a></li>
+    <li><a href="http://www.pchome.com.tw">網路家庭</a></li>
+    <li><a href="http://www.gotop.com.tw">碁峰資訊</a></li>
+  </ul>
+	</div>
+</div>
+</body>
+</html>

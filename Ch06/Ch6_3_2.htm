@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch6_3_2.htm</title>
+<script language="JavaScript">
+function showParentNode() {
+   var objLi = document.getElementById("myLI");
+   var objNode = objLi.parentNode;
+   alert(objNode.nodeName);
+}
+function showParentNode1() {
+   var objSpan = document.getElementById("mySpan");
+   var objNode = objSpan.parentNode;
+   alert(objNode.nodeName);
+}
+</script>
+</head>
+<body>
+<h2>ÂsÄý¤÷¸`ÂI</h2>
+<hr/>
+<ul id="myUL">
+   <li>HTML</li>
+   <li style="color:red" id="myLI" 
+       onclick="showParentNode()">JavaScript</li>
+   <li><span style="color:red" id="mySpan"
+       onclick="showParentNode1()">VBScript</span></li>
+   <li>PHP</li>
+   <li>XML</li>
+</ul>
+</body>
+</html>

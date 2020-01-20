@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch4_5_3.htm</title>
+<script language="JavaScript">
+// 物件的建構函數
+function circle(r, color) {
+   this.r = r;
+   this.color = color;
+   this.display = showCircle;
+}
+// 物件方法
+function showCircle() {
+   document.write("半徑 : " + this.r + "<br/>");
+   document.write("色彩 : " + this.color + "<br/>");
+   document.write("圓周率 : " + this.PI + "<br/><hr/>");
+}
+// 新增Prototype物件方法
+function getArea(){
+   var result = this.PI * this.r * this.r;
+   document.write("圓面積 : " + result + "<br/><hr/>");   
+}
+</script>
+</head>
+<body>
+<h2>新增Prototype物件的方法</h2>
+<hr/>
+<script language="JavaScript">
+// 建立自訂物件
+var objCircle1 = new circle(2, "red");
+var objCircle2 = new circle(3, "green");
+// 新增Prototype物件的屬性
+circle.prototype.PI = 3.1415926;
+//新增Prototype物件的方法
+circle.prototype.area = getArea;  
+// 執行物件方法
+objCircle1.display();
+objCircle1.area();  // 執行Prototype方法
+// 執行物件方法
+objCircle2.display();
+objCircle2.area();  // 執行Prototype方法
+</script>
+</body>
+</html>

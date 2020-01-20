@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch4_4_3.htm</title>
+<script language="JavaScript">
+// 物件的建構函數
+function nameCard(name,age,phone,email) {
+   this.name = name;
+   this.age = age;
+   this.phone = phone;
+   this.email = email;
+}
+</script>
+</head>
+<body>
+<h2>使用建構函數建立物件</h2>
+<hr/>
+<script language="JavaScript">
+// 建立自訂物件
+var objMyCard = new nameCard("陳會安", 42, 
+                "02-22222222","hueyan@ms2.hinet.net");
+var objCard = new nameCard();  // 建立物件
+// 設定屬性
+objCard.name = "江小魚";
+objCard.age = 35;
+objCard.phone = "03-33333333";
+objCard.email = "hueyan@yahoo.com.tw";
+// 顯示objMyCard物件屬性
+document.write("姓名 : " + objMyCard.name + "<br/>");
+document.write("年齡 : " + objMyCard.age + "<br/>");
+document.write("電話 : " + objMyCard.phone + "<br/>");
+document.write("郵件 : " + objMyCard.email + "<br/><hr/>");
+// 顯示objCard物件屬性
+document.write("姓名 : " + objCard.name + "<br/>");
+document.write("年齡 : " + objCard.age + "<br/>");
+document.write("電話 : " + objCard.phone + "<br/>");
+document.write("郵件 : " + objCard.email + "<br/>");
+</script>
+</body>
+</html>

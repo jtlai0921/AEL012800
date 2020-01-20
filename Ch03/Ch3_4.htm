@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch3_4.htm</title>
+</head>
+<body>
+<h2>猜數字遊戲(break和continue)</h2>
+<hr/>
+<script language="JavaScript">
+// 變數宣告
+var target = 36;
+var number = 0;
+var times = 0;
+// 無窮迴圈
+do {
+    number = window.prompt("輸入數字", number);
+    // 離開無窮迴圈
+    if (number == null || number == target)
+        break;
+    // 判斷是太大或太小
+    if (number > target) {
+        alert(number + "太大!");
+        times++;
+        continue;
+    }
+    else
+        if (number != target) {
+            alert(number + "太小!");
+            times++
+            continue;
+        }          
+} while (true);
+if (number == null)
+   document.write("不猜了! 答案為: " + target + "<br/>");
+else {
+   document.write("猜對了! 答案為: " + target + "<br/>"); 
+   document.write("共猜了: " + (times+1) + "次<br/>"); 
+}   
+</script>
+</body>
+</html>

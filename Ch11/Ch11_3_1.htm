@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch11_3_1.htm</title>
+<style type="text/css">
+.more { 
+   padding : 3px;
+   border   : 1px solid black;
+   width   : 200px;
+}
+.more-options { font-size : 10pt; }
+</style> 
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('div.more').hide();
+   $('a.more-options').click(function() {
+      if ($('div.more').is(':hidden'))
+         $('div.more').slideDown('slow');
+      else
+         $('div.more').slideUp('slow');   
+      return false;
+   });   
+});
+</script>
+</head>
+<body>
+<div id="search">
+  <h2>滑動顯示搜尋選項</h2>
+  <input type="text" width="50"/>
+  <input type="submit" value="搜尋"/><br/>
+  <a href="#" class="more-options">更多搜尋選項</a>  
+  <div class="more">
+     <input type="radio" name="category"/>中文網頁<br/> 
+     <input type="radio" name="category"/>英文網頁<br/> 
+     <input type="checkbox" name="language"/>包含簡繁<br/>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch5_6_1.htm</title>
+</head>
+<body>
+<h2>JavaScript的例外處理</h2>
+<hr/>
+<script language="JavaScript">
+var x = 10;
+try { 
+   x = y;  // 測試的錯誤程式碼
+}
+catch(e) {
+   // 例外處理的程式碼
+   document.write("錯誤碼: " + (e.number & 0xFFFF) + "<br/>");
+   document.write("錯誤說明(message): " + e.message + "<br/>");
+   document.write("錯誤說明(description): " + e.description + "<br/>");
+}
+finally {
+   // 顯示測試值
+   document.write("<hr/>測試值x = " + x + "<br/>");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch15_2_3.htm</title>
+<style type="text/css">
+label { display: block; }
+label.valid {  width: 24px;
+               color: red;
+               background: yellow;
+               display: inline-block; }
+label.error {  color:red;
+               padding-left: 5px;
+               display: inline-block; }
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script src="jquery.validate.min.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('form').validate({
+    rules: {
+      name: {  required: true },
+      email: { required: true,
+               email: true    },       
+      pass1: { minlength: 6,
+               required: true },
+      pass2: { equalTo: "#pass1" }
+    },
+    messages: {
+      name: "請輸入姓名...",
+      email: {
+        required: "請輸入電子郵件地址...",
+        email: "電子郵件地址格式為:name@domain.com"
+      },
+      pass1: "請輸入最小長度6個字元的密碼..."      
+    },
+    success: function(label) {
+      label.text('OK').addClass('valid');
+    }
+   });
+});
+</script>
+</head>
+<body>
+<form>
+  <div>
+    <label for="name">姓名:</label>
+    <input type="text" name="name" id="name"/>
+  </div><div>
+    <label for="email">電子郵件地址:</label>
+    <input type="text" name="email" id="email"/>
+  </div><div>
+    <label for="pass1">密碼:</label>
+    <input type="password" name="pass1" id="pass1"/>
+  </div><div>
+    <label for="pass2">確認密碼:</label>
+    <input type="password" name="pass2" id="pass2"/>
+  </div><div>
+    <input type="submit" value="送出"/>
+  </div>
+</form>
+</body>
+</html>

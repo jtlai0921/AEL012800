@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch5_4_1.htm</title>
+</head>
+<body>
+<h2>取得日期時間</h2>
+<hr/>
+<script language="JavaScript">
+var weekday=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+var dttoday = new Date();
+// 取得系統日期
+var output = dttoday.getDate() + "/";
+output += (dttoday.getMonth() + 1) + "/";
+output += dttoday.getFullYear() + "<br/>";
+document.write("系統日期: " + output);
+// 取得系統時間
+output = dttoday.getHours() + ":";
+output += dttoday.getMinutes() + ":";
+output += dttoday.getSeconds() + "<br/>";
+document.write("系統時間: " + output);
+document.write(weekday[dttoday.getDay()]);
+</script>
+</body>
+</html>

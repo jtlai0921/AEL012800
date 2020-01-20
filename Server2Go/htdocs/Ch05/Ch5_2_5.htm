@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch5_2_5.htm</title>
+</head>
+<body>
+<h2>子字串處理</h2>
+<hr/>
+<script language="JavaScript">
+// 測試字串
+var str1="JavaScript";
+var str2= new String("網頁程式設計");
+document.write("測試的英文字串: \"" + str1 + "\"<br/>");
+document.write("測試的中文字串: \"" + str2 + "\"<br/>");
+document.write("英文replace('Java','VB'): "+str1.replace('Java','VB')+"<br/>");
+document.write("中文split('程式'): " + str2.split('程式') + "<br/>");
+document.write("英文substr(2,4): " + str1.substr(2,4) + "<br/>");
+document.write("中文substring(2,5): " + str2.substring(2,5) + "<br/>");
+// 連接2個字串
+str3 = str1.concat(str2);
+document.write("連接字串str1.concat(str2): " + str3 + "<br/>");
+</script>
+</body>
+</html>

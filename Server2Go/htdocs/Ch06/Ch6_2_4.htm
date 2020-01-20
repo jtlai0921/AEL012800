@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch6_2_4.htm</title>
+<script language="JavaScript">
+function showPosition() {
+   var p = document.getElementById("myP");
+   alert("left:" + p.offsetLeft + " top:" + p.offsetTop);
+}
+function showSize() {
+   var p = document.getElementById("myP");
+   alert(p.offsetHeight + " X " +p.offsetWidth);
+}
+function showParent() {
+   var p = document.getElementById("myP");
+   alert(p.offsetParent.tagName);
+}
+function viewElement() {
+   var objEle = document.getElementsByTagName("p");
+   if (objEle.length > 4 )
+      objEle[3].scrollIntoView(true);
+}
+</script>
+</head>
+<body id="myBody">
+<h2>存取HTML元素的位置和尺寸</h2>
+<hr/>
+<p id="myP" align="left">存取HTML元素的位置和尺寸</p>
+<form>
+<input type="button" onclick="showPosition()" value="元素位置">
+<input type="button" onclick="showSize()" value="元素尺寸">
+<input type="button" onclick="showParent()" value="顯示父元素">
+<input type="button" onclick="viewElement()" value="顯示段落">
+</form>
+<p align="left">存取HTML元素的位置和尺寸1</p>
+<p align="left">存取HTML元素的位置和尺寸2</p>
+<p align="left">存取HTML元素的位置和尺寸3</p>
+<p align="left">存取HTML元素的位置和尺寸4</p>
+<p align="left">存取HTML元素的位置和尺寸5</p>
+</body>
+</html>

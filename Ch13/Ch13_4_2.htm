@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch13_4_2.htm</title>
+<style type="text/css">
+.active { background-color: pink; }
+.special { background : #6AAF18;
+           text-align : center;
+           color : red;
+           font-weight : bold;}
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('tr').hover(
+     function() {
+        $(this).addClass('active')
+        $(this).find('td:contains("Java")')
+        .append('<span class="special">New!</span>');
+     }, function() {
+        $(this).removeClass('active');
+        $('.special').remove();
+   });
+});
+</script>
+</head>
+<body>
+<table border="1">
+<tr>
+   <td>JavaScript</td>
+   <td>Dynamic HTML</td>
+   <td>Ajax</td>
+</tr><tr>
+   <td>JSP</td>
+   <td>PHP</td>
+   <td>Java Applete</td>
+</tr><tr>
+   <td>VBScript</td>
+   <td>ASP</td>
+   <td>Java Servlet</td>
+</tr><tr>
+   <td>ASP.NET</td>
+   <td>ActionScript</td>
+   <td>Flash</td>
+</tr>
+</table>
+</body>
+</html> 

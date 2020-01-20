@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ch16_6.htm</title>
+<link type="text/css" rel="stylesheet" href="jquery.mobile-1.0.min.css">
+<script src="jquery-1.7.1.min.js"></script>
+<script src="jquery.mobile-1.0.min.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('body').bind('taphold', function(event) {
+      alert('觸摸且按住螢幕!');
+      event.stopPropagation();
+      return false;
+   });
+   $('body').bind('swipe', function(event) {
+      alert('已經滑過螢幕!');
+      event.stopPropagation();
+      return false;
+   });
+});
+</script> 
+</head>
+<body>
+<div data-role="page">
+  <div data-role="header">
+  <h3>jQuery Mobile事件</h3>
+  </div>
+  <div data-role="content">
+     <p>測試事件:</p>
+     <ul>
+       <li>觸摸且按住</li>
+       <li>滑過</li>
+     </ul>
+  </div>
+  <div data-role="footer">
+  <h4>製作者: 陳會安</h4>
+  </div>
+</div>
+</body>
+</html>

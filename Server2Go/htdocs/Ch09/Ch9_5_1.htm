@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch9_5_1.htm</title>
+<style type="text/css">
+p { font-size: 14pt; 
+    color: yellow;
+    background-color: blue;
+}
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   var fonSize;
+   $('h2').css('background-color', 'red');
+   $('div').css({
+      'background-color': '#dddddd',
+      'color' : '#666666',
+      'font-size' : '12pt',
+      'line-height' : '2.5em'
+   });
+   fontSize = $('p.title').css('font-size');
+   alert(fontSize);
+});
+</script>
+</head>
+<body>
+<h2>使用jQuery存取CSS</h2>
+<hr/>
+<p class="title">JavaScript網頁設計</p>
+<p>jQuery網頁設計</p>
+<div>HTML網頁設計</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch5_2_4.htm</title>
+</head>
+<body>
+<h2>字串搜尋</h2>
+<hr/>
+<script language="JavaScript">
+// 測試字串
+var str1="JavaScript";
+var str2= new String("網頁程式設計");
+document.write("測試的英文字串: \"" + str1 + "\"<br/>");
+document.write("測試的中文字串: \"" + str2 + "\"<br/>");
+document.write("英文字元indexOf('a'): " + str1.indexOf('a') + "<br/>");
+document.write("英文字元indexOf('a', 2): " + str1.indexOf('a', 3) + "<br/>");
+document.write("中文字串indexOf('程式'): " + str2.indexOf('程式') + "<br/>");
+document.write("英文字元lastIndexOf('a'): " + str1.lastIndexOf('a') + "<br/>");
+document.write("英文字元match('Script'): " + str1.match('Script') + "<br/>");
+document.write("中文字串match('程式'): " + str2.match('程式') + "<br/>");
+document.write("英文字元search('Script'): " + str1.search('Script') + "<br/>");
+document.write("中文字串search('學習'): " + str2.search('學習') + "<br/>");
+</script>
+</body>
+</html>

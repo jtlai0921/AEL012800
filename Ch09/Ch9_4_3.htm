@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch9_4_3.htm</title>
+<style type="text/css">
+.line { border: 1px solid #333; }
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('input[type="checkbox"]:checked').addClass('line');
+});
+</script>
+</head>
+<body>
+<form name="form">
+<input type="checkbox" value="芒果" 
+       checked="checked"/>芒果
+<input type="checkbox" value="荔枝"/>荔枝
+<input type="checkbox" value="龍眼"
+       checked="checked"/>龍眼
+<input type="checkbox" value="桃子"/>桃子
+<p><input type="submit" value="選擇"/></p>
+</form>
+</body>
+</html>

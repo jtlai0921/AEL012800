@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch9_5_2.htm</title>
+<style type="text/css">
+.littlered   {color: red; font-size: 9pt}
+.littlegreen {color: green; font-size: 9pt}
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('h2').addClass('littlered');
+   $('div').removeClass();
+   $('p').toggleClass('littlegreen');
+});
+</script>
+</head>
+<body>
+<h2>自訂樣式類別Class</h2>
+<div class="littlered">自訂樣式類別Class</div>
+<span class="littlegreen">自訂樣式類別Class</span>
+<p>自訂樣式類別Class</p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch15_4_5.htm</title>
+<link type="text/css" rel="stylesheet" href="css/smoothness/jquery-ui-1.8.16.custom.css">
+<style type="text/css">
+label { display: block; }
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script src="jquery-ui-1.8.16.custom.min.js"></script>
+<script language="JavaScript">
+var terms = [
+    "ASP", "ASP.NET", "Java", "JavaScript", 
+    "PHP", "JSP", "jQuery", "HTML"
+    ];
+$(document).ready(function() {
+   $('#search').autocomplete({ source: terms});
+   $('#datepicker').datepicker();  
+});
+</script>
+</head>
+<body>
+<div>
+<label>輸入關鍵字 : </label>
+<input type="text" id="search"/>
+</div>
+<div>
+<label>輸入生日日期 : </label>
+<input type="text" id="datepicker"/>
+</div>
+</body>
+</html>

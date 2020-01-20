@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch9_4_2.htm</title>
+<style type="text/css">
+.blue { background-color: yellow; }
+.line { border: 1px solid #333; }
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('div[id^="red"]').addClass('line');
+   $('div[id$="bird"]').addClass('blue');
+});
+</script>
+</head>
+<body>
+<div id="red-pen">¬õµ§</div>
+<div id="blue-pen">ÂÅµ§</div>
+<div id="black-pen">¶Âµ§</div>
+<div id="red-bird">¬õ³¾</div>
+<div id="blue-bird">ÂÅ³¾</div>
+</body>
+</html>

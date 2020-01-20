@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch13_3_1.htm</title>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+  $("form").submit( function() {
+    var hasError = false;
+    $(this).find(":text").each(function() {
+      if ($(this).val().length == 0) {
+        alert("錯誤: 文字方塊需要輸入值!");
+        $(this).focus();
+        hasError = true;
+        return false;
+      }
+    });
+    if (hasError) return false;
+    return true;
+  });
+});
+</script>
+</head>
+<body>
+<div class="content">
+  <form action="">
+     姓名: <input type="text" id="name"/><br/>
+     電郵: <input type="text" id="email"/><br/>
+     <textarea rows="5" cols="25" id="comment">
+     </textarea><br/>   
+     <input type="submit" value="送出"/>
+  </form>
+</div>
+</body>
+</html>

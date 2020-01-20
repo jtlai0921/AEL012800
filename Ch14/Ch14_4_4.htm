@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch14_4_4.htm</title>
+<style type="text/css">
+.box {
+   width:300px;
+   background-color:#ffffff;
+   border:2px solid blue;
+   padding:10px;
+}
+</style> 
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $.getJSON('book.json', function(data) {
+      var html = '<ul>';
+      $.each(data, function(key, val) {
+         html += '<li id="' + key + '">' + val.id + ':' + val.title + '</li>';
+      });
+      html += '</ul>';
+      $('#result').html(html);
+   });
+});
+</script>
+</head>
+<body>
+<div id="result" class="box"></div>
+</body>
+</html>

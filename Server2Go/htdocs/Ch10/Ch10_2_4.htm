@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch10_2_4.htm</title>
+<style type="text/css">
+.large { font-size: 15pt; }
+.line { border: 1px solid #333; cursor: pointer; }
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('span').addClass('line');
+   $('#default').click(function() {
+      $('p').removeClass('large');
+   });
+   $('#large').click(function() {
+      $('p').addClass('large');
+   });
+   $('#remove').click(function() {
+      $('p').removeClass('large');
+      $('#large').removeClass('line');
+      $('#large').unbind('click');
+   });  
+});
+</script>
+</head>
+<body>
+<div id="switcher">
+<span id="default">標準</span>
+<span id="large">放大</span>
+<span id="remove">固定標準</span>
+</div>
+<p>jQuery事件處理</p>
+</body>
+</html>

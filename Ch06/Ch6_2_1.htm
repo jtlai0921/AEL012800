@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch6_2_1.htm</title>
+<script language="JavaScript">
+function showAElement() {
+   var a = document.getElementById("google");
+   alert(a.nodeName + " - " + a.href); 
+}
+function showButtonElement() {
+   var btn = document.getElementById("test");
+   alert(btn.tagName + " - " + btn.type); 
+}
+</script>
+</head>
+<body>
+<h2>使用Id屬性取得元素節點</h2>
+<hr/>
+<p id="content">使用Id屬性取得元素節點</p>
+<p><a id="google" 
+      href="http://www.google.com.tw">Google</a></p>
+<input id="test" type="button"
+       onclick="showAElement()" value="選取<a>元素">
+<input type="button"
+       onclick="showButtonElement()" 
+       value="選取<input>元素">
+</body>
+</html>

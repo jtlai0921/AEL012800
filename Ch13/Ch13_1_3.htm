@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch13_1_3.htm</title>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('#price').val(199);
+   $('#discount').attr('checked', true);
+   $('a.cal').click(function() {
+      var price = $('#price').val();
+      var quantity = $('#quantity').val();
+      var amount;
+      if ($('#discount').attr('checked')) {
+         amount = (price * quantity) * 0.9;
+         amount = amount.toFixed(2); 
+      }
+      else {
+         amount = price * quantity;
+      }    
+      $('#amount').val(amount);    
+      return false;
+   });
+});
+</script>
+</head>
+<body>
+<div class="content">
+  <form method="post" id="calculate">
+     <div>
+       <label for="quantity" class="label">數量:</label>
+       <input type="text" id="quantity" size="20">
+     </div>
+     <div>
+       <label for="price" class="label">單價: </label>
+       <input type="text" id="price" size="20">
+     </div>
+     <input type="checkbox" id="discount">
+     <label for="discount">打9折</label><hr/>
+     <a href="#" class="cal">計算總價</a> = 
+     <input type="text" id="amount" size="14">
+  </form>   
+</div>
+</body>
+</html>

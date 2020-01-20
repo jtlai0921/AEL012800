@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch13_3_3.htm</title>
+<style type="text/css">
+span.error { float: right; color : red; }
+input.error { border: 2px solid red; }
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $(':input').blur(function() {
+      if($(this).val().length == 0) {
+         $(this).addClass('error')
+         .after('<span class="error">不可是空的!</span>');
+      }
+   });
+   $(':input').focus(function() {
+      $(this).removeClass('error')
+      .next('span').remove();
+   });
+});
+</script>
+</head>
+<body>
+<div class="content">
+  <form action="">
+     姓名: <input type="text" id="name"/><br/>
+     電郵: <input type="text" id="email"/><br/>
+     <textarea rows="5" cols="25" id="comment">
+     </textarea><br/>   
+     <input type="submit" value="送出"/>
+  </form>
+</div>
+</body>
+</html>

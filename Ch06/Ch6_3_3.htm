@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch6_3_3.htm</title>
+<script language="JavaScript">
+function showNode1() {
+   var objLi = document.getElementById("myLI");
+   var objNode = objLi.previousSibling;
+   alert(objNode.firstChild.data);
+}
+function showNode2() {
+   var objLi = document.getElementById("myLI1");
+   var objNode = objLi.previousSibling;
+   alert(objNode.innerHTML);
+}
+</script>
+</head>
+<body>
+<h2>ÂsÄý¥S§Ì¸`ÂI</h2>
+<hr/>
+<ul id="myUL">
+   <li>HTML
+   <li style="color:red" id="myLI"
+       onclick="showNode1()">JavaScript
+   <li style="color:red" id="myLI1"
+       onclick="showNode2()">VBScript
+   <li>PHP
+   <li>XML
+</ul>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch13_2_4.htm</title>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+  $('.checkAll:checkbox').change(function() {
+    $(':checkbox[id="web"]').attr('checked', true);
+  });
+});
+</script>
+</head>
+<body>
+<div class="content">
+  <form action="">
+    <div class="stats">
+     <h2 class="title">使用的網頁技術</h2>
+     <input type="checkbox" id="web" value="JavaScript"/>
+         JavaScript<br/>
+     <input type="checkbox" id="web" value="jQuery"/>
+         jQuery<br/>
+     <input type="checkbox" id="web" value="ASP.NET"/>
+         ASP.NET<br/>
+     <input type="checkbox" id="web" value="PHP"/>
+         PHP<br/>
+     <input type="checkbox" id="web" value="JSP"/>
+         JSP<br/>
+     <hr/>
+     <input type="checkbox" class="checkAll" id="web" />
+     <span>全選</span><br/>
+     <input type="submit" value="送出"/>
+    </div>
+  </form>  
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch15_2_1.htm</title>
+<style type="text/css">
+#animate {
+  width: 200px;
+  height: 200px;
+  background-color: yellow;  
+}
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script src="jquery.easing.1.3.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('#animate').toggle(
+      function() {
+         $(this).animate(
+         {
+          width: '350px',
+          height: '350px' 
+         }, 1000, 'easeOutBounce');
+      },
+      function() {
+         $(this).animate(
+         {
+          width: '200px',
+          height: '200px' 
+         }, 1000, 'easeInOutElastic');  
+      }
+  ); 
+});
+</script>
+</head>
+<body>
+<div id="animate">
+<p>jQuery是在2006年1月由John Resig在BarCamp NYC
+ 發表的網頁技術，這是一種高效率和簡潔的JavaScript函數庫，
+ 目前是MIT和GPL授權的免費軟體，可供個人或商業專案使用。
+</p>
+</div>
+</body>
+</html>

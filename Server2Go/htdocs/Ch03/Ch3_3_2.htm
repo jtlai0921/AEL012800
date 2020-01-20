@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch3_3_2.htm</title>
+</head>
+<body>
+<h2>測試for/in迴圈</h2>
+<hr/>
+<script language="JavaScript">
+// 變數宣告
+var prop;
+var objAddress = new Object();
+objAddress.name = "陳會安";
+objAddress.age = "40";
+objAddress.phone = "02-22222222";
+objAddress.email = "hueyan@ms2.hinet.net";
+// 迴圈敘述
+for (prop in objAddress){
+    document.write("屬性: " + prop + "=" + objAddress[prop] + "<br/>");
+}
+</script>
+</body>
+</html>

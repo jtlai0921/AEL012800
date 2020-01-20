@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch5_3_3.htm</title>
+</head>
+<body>
+<h2>JavaScript的二維陣列</h2>
+<hr/>
+<script language="JavaScript">
+// 建立二維陣列
+var users = new Array(5);
+for(var i = 0; i < 5; i++)
+   users[i] = new Array(2);
+users[0][0] = "Joe";
+users[0][1] = "1234";
+users[1][0] = "Jane";
+users[1][1] = "5678";
+users[2][0] = "Tony";
+users[2][1] = "9012";
+users[3][0] = "Tom";
+users[3][1] = "1234";
+users[4][0] = "Merry";
+users[4][1] = "5678";
+// 使用迴圈顯示陣列值
+for(var j = 0; j < users.length; j++){
+   for(i = 0; i < users[i].length; i++)
+      document.write(users[j][i] + ",");
+   document.write("<br/>");
+}
+</script>
+</body>
+</html>

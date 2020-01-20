@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch6_2_2.htm</title>
+<script language="JavaScript">
+function getEle1() {
+   var p = document.getElementsByTagName("p");
+   alert("P元素有: " + p.length + "個");
+}
+function getEle2() {
+   var h = document.getElementsByTagName("h2");
+   alert("H2元素有: " + h.length + "個");
+}
+function showItems1() {
+   var strTags = "";
+   var f = document.getElementsByTagName("input");
+   for (var i = 0; i < f.length; i++) {
+      objEle = f.item(i);
+      strTags += objEle.type + " ";
+   }
+   alert(strTags); 
+}
+function showItems2() {
+   var strTags = "";
+   var f = document.getElementsByTagName("input");
+   for (var i = 0; i < f.length; i++) 
+      strTags += f[i].type + " ";
+   alert(strTags); 
+}
+</script>
+</head>
+<body>
+<h2>HTML元素H2</h2>
+<hr/>
+<p>HTML元素P</p>
+<p>HTML元素P</p>
+<h2>HTML元素H2</h2>
+<form>
+   <input type="text"/>
+   <input type="radio"/>
+   <input type="checkbox"/>
+</form>
+<input type="button" onclick="getEle1()" value="取得P元素">
+<input type="button" onclick="getEle2()" value="取得H2元素">
+<input type="button" onclick="showItems1()" value="顯示INPUT元素">
+<input type="button" onclick="showItems2()" value="顯示INPUT元素">
+</body>
+</html>

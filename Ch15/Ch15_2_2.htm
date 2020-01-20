@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch15_2_2.htm</title>
+<style type="text/css">
+label { display: block; }
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script src="jquery.qtip-1.0.0-rc3.min.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('input[title]').qtip(
+    { 
+       style: { color: 'black', tip: true },
+       position: { corner: { target: 'bottomMiddle' }},
+       show: { when: { event: 'focus' }},
+       hide: { when: { event: 'blur' }}
+    }
+   );
+});
+</script>
+</head>
+<body>
+<form>
+  <div>
+    <label for="name">姓名:</label>
+    <input type="text" id="name"
+           title="請輸入姓名." />
+  </div><div>
+    <label for="email">電子郵件地址:</label>
+    <input type="text" id="email"
+           title="請輸入電子郵件地址."/>
+  </div><div>
+    <label for="pass1">密碼:</label>
+    <input type="password" id="pass1"
+           title="請輸入密碼."/>
+  </div><div>
+    <label for="pass2">確認密碼:</label>
+    <input type="password" id="pass2"
+           title="請再輸入一次密碼."/>
+  </div><div>
+    <input type="submit" value="送出"/>
+  </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch6_3_4.htm</title>
+<script language="JavaScript">
+function showChilds1() {
+   var objUL = document.getElementById("myUL");
+   var objChilds = objUL.childNodes;
+   var strTags = "";
+   for (var i = 0; i < objChilds.length; i++) {
+      objEle = objChilds.item(i);
+      strTags += objEle.nodeName + "\n";
+   }
+   alert(strTags); 
+}
+function showChild2() {
+   var objUL = document.getElementById("myUL");
+   var objChilds = objUL.children;
+   var strTags = "";
+   for (var i = 0; i < objChilds.length; i++) {
+      objEle = objChilds[i];
+      strTags += objEle.nodeName + "\n";
+   }
+   alert(strTags); 
+}
+</script>
+</head>
+<body>
+<h2>瀏覽子節點與子元素</h2>
+<hr/>
+<ul id="myUL">
+   <li>HTML</li>
+   <li style="color:red" id="myLI"
+       onclick="showChilds1()">JavaScript</li>
+   <li style="color:red" id="myLI1"
+       onclick="showChild2()">VBScript</li>
+   <li>PHP</li>
+   <li>XML</li>
+</ul>
+</body>
+</html>

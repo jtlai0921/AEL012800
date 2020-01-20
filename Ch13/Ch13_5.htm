@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch13_5.htm</title>
+<style type="text/css">
+th { background-color : #555; color: white; }
+table, #books { border : 1px solid #999; 
+                width : 300px;}
+#nav { margin : 10px 0;}
+#nav a { color : #555; }
+.active { text-decoration : none;
+          font-weight : bold; }
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function(){
+   var rowsPage = 3;  // 每頁有幾列
+   // 取得表格共幾列
+   var totalRows = $('#books tr').length;
+   // 計算頁數
+   var numPages = Math.floor(totalRows/rowsPage);
+   var mod = totalRows % rowsPage; // 餘數
+   if (mod > 0) numPages++; // 不能整除 
+   for ( i = 0; i < numPages;i++ ) {
+      var pageNum = i + 1;  // 頁碼超連結
+      $('#nav').append('<a href="#" rel="' + 
+                 i + '">' + pageNum + '</a> ');
+   }  // 顯示第1頁
+   $('#books tr').hide().slice(0, rowsPage).show();  
+   $('#nav a:first').addClass('active');
+   // 按下頁碼超連結
+   $('#nav a').click(function(event) {
+      $('#nav a').removeClass('active');
+      $(this).addClass('active');
+      var currPage = $(this).attr('rel');
+      var begin = currPage * rowsPage;
+      var end = begin + rowsPage;
+      $('#books tr').hide().slice(begin, end).show();
+      event.preventDefault();
+   });
+});
+</script>
+<body>
+<div class="content">
+   <table>
+    <thead>
+      <tr>
+         <th>書號</th><th>書名</th><th>定價</th>
+      </tr>
+    </thead>
+    <tbody id="books">
+      <tr>
+         <td>P7501</td>
+         <td>Java程式設計</td>
+         <td>$560</td>
+      </tr><tr>
+         <td>P7511</td>
+         <td>C/C++程式設計</td>
+         <td>$500</td>
+      </tr><tr>
+         <td>P7601</td>
+         <td>Visual Basic程式設計</td>
+         <td>$550</td>
+      </tr><tr>
+         <td>W601</td>
+         <td>ASP.NET網頁設計</td>
+         <td>$550</td>
+      </tr><tr>
+         <td>W701</td>
+         <td>PHP網頁設計</td>
+         <td>$500</td>
+      </tr><tr>
+         <td>W801</td>
+         <td>JSP網頁設計</td>
+         <td>$600</td>
+      </tr><tr>
+         <td>W901</td>
+         <td>JavaScript網頁設計</td>
+         <td>$600</td>
+      </tr>
+    </tbody>
+  </table>
+  <div id="nav"></div>
+</div>   
+</body>
+</html>

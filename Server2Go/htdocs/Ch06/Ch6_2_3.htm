@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch6_2_3.htm</title>
+<script language="JavaScript">
+function showText() {
+   var li = document.getElementById("myLI");
+   alert(li.innerHTML);
+}
+function changeText() {
+   var c = document.getElementById("content");
+   alert(c.innerHTML);
+   c.innerHTML = "JavaScript和DOM"; 
+}
+</script>
+</head>
+<body>
+<h2>取得與更改元素內容</h2>
+<hr/>
+<p id="content">取得與更改元素內容</p>
+<ul id="myUL">
+   <li>HTML</li>
+   <li id="myLI">JavaScript</li>
+   <li>VBScript</li>
+   <li>PHP</li>
+   <li>XML</li>
+</ul>
+<input type="button" onclick="showText()" value="顯示元素內容">
+<input type="button" onclick="changeText()" value="更改元素內容">
+</body>
+</html>

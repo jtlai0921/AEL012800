@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch2_4_1.htm</title>
+</head>
+<body>
+<script language="JavaScript">
+// 變數宣告
+var strName, intBalance, blnSex;
+// 指定變數值
+strName = "陳會安";
+intBalance = 1000;
+blnSex = true;
+// 顯示資料型態的強制轉換的結果
+output = strName + intBalance; // 字串加數值
+document.write(output + " : " + typeof(output) + "<br/>");
+output = strName + blnSex;  // 字串加布林
+document.write(output + " : " + typeof(output) + "<br/>");
+output = blnSex + intBalance; // 布林加數值
+document.write(output + " : " + typeof(output) + "<br/>");
+blnSex = false;  // 重設布林值
+output = blnSex + intBalance; // 布林加數值
+document.write(output + " : " + typeof(output) + "<br/>");
+</script>
+</body>
+</html>

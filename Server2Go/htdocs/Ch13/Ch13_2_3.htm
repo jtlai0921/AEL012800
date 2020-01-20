@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch13_2_3.htm</title>
+<style type="text/css">
+.inactive { color: #666666; }
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $(':text').each(function() {
+      var hint = $(this).val();
+      $(this).addClass('inactive')
+      .focus(function() {
+         $(this).removeClass('inactive');
+         if($(this).val() == hint || '') {
+            $(this).val('');  // 清除
+         }
+      }).blur(function() {
+         if($(this).val() == '') {
+            $(this).addClass('inactive');
+            $(this).val(hint); // 顯示
+         }
+      });
+   });
+});
+</script>
+</head>
+<body>
+<div class="content">
+  <form action="">
+     <input type="text" id="name" value="姓名"/><br/>
+     <input type="text" id="email" value="電子郵件地址"/>
+     <br/><textarea rows="5" cols="25" id="comment">
+          </textarea><br/>   
+     <input type="submit" value="送出"/>
+  </form>
+</div>
+</body>
+</html>

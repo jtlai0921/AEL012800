@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch12_2_1.htm</title>
+<style type="text/css">
+.red { color : red; }
+.green { color : green; }
+.yellow { background-color : yellow; }
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('a.select1').click(function() {
+      $('a').removeClass();
+      $('a').addClass('red');    
+      return false;
+   });
+   $('a.select2').click(function() {
+      $('a').removeClass();
+      $('#mainNav a').addClass('green');
+      $('.navigation a').addClass('yellow');
+      return false;
+   });
+   $('a.select3').click(function() {
+      $('a').removeClass();
+      $('a[href^="http://"]').addClass('yellow');
+      return false;
+   });    
+});
+</script>
+</head>
+<body>
+<div class="content">
+	<div class="navigation">
+	<ul id="mainNav">
+    <li><a href="http://www.google.com">Google谷哥</a></li>
+    <li><a href="http://www.yahoo.com.tw">Yahoo!奇摩</a></li>
+    <li><a href="http://www.hinet.net">中華電信</a></li>
+    <li><a href="http://www.pchome.com.tw">網路家庭</a></li>
+    <li><a href="#about">關於我</a></li>
+  </ul>
+	</div>
+</div>
+<a href="#" class="select1">全部超連結</a>  
+<a href="#" class="select2">巡覽超連結</a>
+<a href="#" class="select3">URL網址超連結</a>
+</body>
+</html>

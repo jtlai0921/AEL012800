@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch13_3_2.htm</title>
+<style type="text/css">
+.error { border: 2px solid red; }
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $(':submit').click(function(event) {
+      $(':text').each(function() {
+         if($(this).val().length == 0) {
+            $(this).addClass('error');
+         }
+      });
+      event.preventDefault();
+   });
+   $(':input').focus(function() {
+      $(this).removeClass('error');
+   });
+});
+</script>
+</head>
+<body>
+<div class="content">
+  <form action="">
+     ©m¦W: <input type="text" id="name"/><br/>
+     ¹q¶l: <input type="text" id="email"/><br/>
+     <textarea rows="5" cols="25" id="comment">
+     </textarea><br/>   
+     <input type="submit" value="°e¥X"/>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch5_3_2.htm</title>
+<script language="JavaScript">
+function showArray(username) {
+   // 使用迴路顯示陣列值
+   for(var i = 0; i < username.length; i++){
+      document.write(username[i] + ",");
+   }
+   document.write("<br/>");
+}
+</script>
+</head>
+<body>
+<h2>Array物件的方法</h2>
+<hr/>
+<script language="JavaScript">
+var username = new Array("Joe","Jane","Tony","Tom");
+var username1 = new Array("陳會安","江小魚","陳允傑");
+document.write("陣列元素共: " + username.length + "個<br/>");
+// 顯示陣列元素
+document.write(username.join() + "<br/>");
+username.reverse();  // 反轉陣列
+showArray(username); // 顯示陣列元素
+username.sort(); // 排序
+showArray(username); // 顯示陣列元素
+username = username.concat(username1); // 結合兩陣列
+showArray(username); // 顯示陣列元素
+</script>
+</body>
+</html>

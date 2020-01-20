@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch13_1_2.htm</title>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('#price').val(199);
+   $('a.cal').click(function() {
+      var price = $('#price').val();
+      var quantity = $('#quantity').val();
+      var amount = price * quantity;
+      $('#amount').val(amount);    
+      return false;
+   });
+});
+</script>
+</head>
+<body>
+<div class="content">
+  <form method="post" id="calculate">
+     <div>
+       <label for="quantity" class="label">數量:</label>
+       <input type="text" id="quantity" size="20">
+     </div>
+     <div>
+       <label for="price" class="label">單價: </label>
+       <input type="text" id="price" size="20">
+     </div> <hr/>
+     <a href="#" class="cal">計算總價</a> = 
+     <input type="text" id="amount" size="14">
+  </form>   
+</div>
+</body>
+</html>

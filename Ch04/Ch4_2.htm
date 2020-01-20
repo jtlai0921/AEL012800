@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch4_2.htm</title>
+</head>
+<script language="JavaScript">
+// 办跑计
+var a = 1;
+var b = 2;
+// ㄧ计A
+function funcA(){
+  // 跋办跑计
+  var a = 3;  // 砞﹚跋办跑计
+  var b = 4;  // 砞﹚跋办跑计
+}
+// ㄧ计B
+function funcB(){
+  a = 3;   // 砞﹚办跑计
+  b = 4;   // 砞﹚办跑计
+}
+</script>
+<body>
+<h2>代刚祘ㄧ计跑计絛瞅</h2>
+<hr/>
+办跑计 a, b<br/>
+funcA跋办跑计 a, b<br/>
+funcB⊿Τヴ跋办跑计<br/><br/>
+<table border="1">
+<tr>
+<td>磅︽筁祘</td><td>办跑计a</td><td>办跑计b</td>
+</tr>
+<script language="JavaScript">
+document.write("<tr><td>﹍</td><td>" + a + "</td>");
+document.write("<td>" + b + "</td></tr>");
+funcA();  // ㊣funcA
+document.write("<tr><td>㊣funcA</td><td>" + a + "</td>");
+document.write("<td>" + b + "</td></tr>");
+funcB();  // ㊣funcB
+document.write("<tr><td>㊣funcB</td><td>" + a + "</td>");
+document.write("<td>" + b + "</td></tr>");  
+</script>
+</table>
+</body>
+</html>

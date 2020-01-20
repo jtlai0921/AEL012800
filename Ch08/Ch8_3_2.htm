@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch8_3_2.htm</title>
+<style type="text/css">
+.blue { color: blue; }
+.red { color: red; }
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+function addColorClass() {
+   $('#list').addClass('red');
+   $('#list li:last').addClass('blue');
+}
+jQuery(document).ready(addColorClass);
+</script>
+</head>
+<body>
+<h2>建立第一個jQuery程式</h2>
+<ol id="list">
+  <li>Java Applet</li>
+  <li>JavaScript</li>
+  <li>VBScript</li>
+  <li>DHTML</li> 
+</ol>
+</body>
+</html>

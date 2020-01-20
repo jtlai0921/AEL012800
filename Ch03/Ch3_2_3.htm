@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch3_2_3.htm</title>
+</head>
+<body>
+<h2>測試if/else多選一條件敘述</h2>
+<hr/>
+<script language="JavaScript">
+// 變數宣告
+var strPayment = "visa";
+// 多選一條件敘述
+if (strPayment == "cash")
+   document.write("使用現金付款!<br/>");
+else
+   if (strPayment == "visa")
+       document.write("使用VISA信用卡付款!<br/>");
+   else
+       if (strPayment == "master")
+           document.write("使用Master信用卡付款!<br/>");
+       else
+           document.write("未明的付款方式!<br/>");
+</script>
+</body>
+</html>

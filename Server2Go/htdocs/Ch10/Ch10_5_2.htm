@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch10_5_2.htm</title>
+<style type="text/css">
+.large { font-size: 15pt; }
+.small { font-size: 10pt; }           
+.line { border: 1px solid #333; cursor: pointer; }
+.selected { font-weight: bold; background-color: gray; }
+.hidden { display: none; }
+.hover {
+   cursor : pointer;
+   background-color : yellow;
+}
+</style> 
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('span').addClass('line');
+   $('#switcher').click(function(event) {
+      if ($(event.target).is('span')) {
+         var className = event.target.id;
+         $('p').removeClass().addClass(className);
+         $('#switcher span').removeClass('selected');
+         $(event.target).addClass('selected');
+         event.stopPropagation();
+      }
+   });
+   $('#switcher h3').toggle(function() {  
+      $('#switcher span').addClass('hidden');
+   }, function() {
+      $('#switcher span').removeClass('hidden');
+   });
+   $('#switcher h3').hover(function() {  
+      $(this).addClass('hover');
+   }, function() {
+      $(this).removeClass('hover');
+   });        
+});
+</script>
+</head>
+<body>
+<div id="switcher">
+<h3>選擇字型尺寸</h2>
+<span id="default">標準</span>
+<span id="large">放大</span>
+<span id="small">縮小</span>
+</div>
+<p>jQuery事件處理</p>
+</body>
+</html>

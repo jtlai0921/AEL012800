@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch6_4.htm</title>
+<script language="JavaScript">
+function showForms() {
+   var f = document.forms;
+   alert("<FORM>: " + f.length);
+}
+function showLinks() {
+   var links = document.links;
+   var strTags = "<A> : " + links.length + "\n";
+   for (var i = 0; i < links.length; i++) {
+      objEle = links.item(i);
+      strTags += objEle.href + "\n";
+   }
+   alert(strTags);
+}
+function showAnchors() {
+   var a = document.anchors;
+   var strTags = "<A> : " + a.length + "\n";
+   for (var i = 0; i < a.length; i++) {
+      objEle = a[i];
+      strTags += objEle.href + "\n";
+   }
+   alert(strTags);
+}
+</script>
+</head>
+<body id="myBody">
+<h2>HTML集合物件</h2>
+<hr/>
+<a href="http://www.google.com.tw">Google</a>
+<a name="hinet" href="http://www.hinet.net">HiNet</a>
+<a name="test">Test</a>
+<form name="Form1"></form>
+<form name="Form2"></form>
+<form>
+<input type="button" onclick="showForms()" value="表單集合">
+<input type="button" onclick="showLinks()" value="超連結集合1">
+<input type="button" onclick="showAnchors()" value="超連結集合2">
+</form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title>Ch6_6_1.htm</title>
+<script language="JavaScript">
+function appendNode() {
+   var objNode = document.getElementById("myDiv");
+   var strText = "段落四";
+   var objNewNode = document.createElement("P");
+   var objTextNode = document.createTextNode(strText);
+   objNode.appendChild(objNewNode);
+   objNewNode.appendChild(objTextNode);
+}
+function insertNode(objNode, objBrother, strText) {
+   var objNode = document.getElementById("myDiv");
+   var objBrother = objNode.children[1];
+   var strText = '段落一.二';
+   var objNewNode = document.createElement("P");
+   var objTextNode = document.createTextNode(strText);
+   objNode.insertBefore(objNewNode, objBrother);
+   objNewNode.appendChild(objTextNode);
+}
+</script>
+</haed>
+<body id="myBody">
+<h2>在DOM節點樹插入和新增節點</h2>
+<hr/>
+<div id="myDiv">
+<p onclick="appendNode()">段落一</p>
+<p onclick="insertNode()">段落二</p>
+<p>段落三</p>
+</div>
+</body>
+</html>

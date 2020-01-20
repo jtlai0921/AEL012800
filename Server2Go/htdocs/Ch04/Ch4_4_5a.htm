@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch4_4_5a.htm</title>
+<script language="JavaScript">
+// 物件的建構函數
+function nameCard(name,age,phone,email) {
+   this.name = name;
+   this.age = age;
+   this.phone = phone;
+   this.email = email;
+   this.print = printCard;
+}
+// 物件方法
+function printCard() {
+   document.write("姓名 : " + this.name + "<br/>");
+   document.write("年齡 : " + this.age + "<br/>");
+   document.write("電話 : " + this.phone + "<br/>");
+   document.write("郵件 : " + this.email + "<br/><hr/>");
+}
+// 新增靜態屬性
+nameCard.belong = "陳允傑";
+// 新增靜態方法
+nameCard.now = function() {
+   return new Date();
+};
+</script>
+</head>
+<body>
+<h2>新增物件方法</h2>
+<hr/>
+<script language="JavaScript">
+// 建立自訂物件
+var objMyCard = new nameCard("陳會安", 42,
+                "02-22222222","hueyan@ms2.hinet.net");
+var objCard = new nameCard();  // 建立物件
+// 設定屬性
+objCard.name = "江小魚";
+objCard.age = 35;
+objCard.phone = "03-33333333";
+objCard.email = "hueyan@yahoo.com.tw";
+// 顯示objMyCard物件屬性
+objMyCard.print();
+// 顯示objCard物件屬性
+objCard.print();
+document.write("名片簿屬於: " + nameCard.belong + "<br/>");
+document.write("現在日期/時間: " + nameCard.now());
+</script>
+</body>
+</html>   

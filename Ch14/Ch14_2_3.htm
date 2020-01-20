@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch14_2_3.htm</title>
+<style type="text/css">
+.hover {
+   cursor : pointer;
+   background-color : yellow;
+}
+</style> 
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('a.tabs').click(function(event) {
+      var url = $(this).attr('href');
+      $('.content').load(url);    
+      event.preventDefault();
+   });
+   $('#description').live('mouseenter', 
+    function() {
+      $(this).addClass('hover');
+    }).live('mouseleave' , function() {
+      $(this).removeClass('hover');  
+   });
+});
+</script>
+</head>
+<body>
+<a href="HTML.htm" class="tabs">HTML</a>
+<a href="JavaScript.htm" class="tabs">JavaScript</a>
+<a href="jQuery.htm" class="tabs">jQuery</a>
+<div class="content"></div>
+</body>
+</html>

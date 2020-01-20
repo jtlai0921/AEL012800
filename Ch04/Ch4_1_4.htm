@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch4_1_4.htm</title>
+<script language="JavaScript">
+// 加到N的總和
+function sumToN(intNumber) {
+  var intSum = 0; 
+  for(var i=1; i<=intNumber; i++) {
+     intSum += i;
+  }
+  return intSum;
+}
+</script>
+</head>
+<body>
+<h2>函數的傳回值</h2>
+<hr/>
+<script language="JavaScript">
+var intSum = sumToN(10);
+document.write("1加到10的值 : " + intSum + "<br/>");
+</script>
+</body>
+</html>

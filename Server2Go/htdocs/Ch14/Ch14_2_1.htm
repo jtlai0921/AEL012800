@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch14_2_1.htm</title>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('a.tabs').click(function(event) {
+      var url = $(this).attr('href');
+      $('.content').load(url);    
+      event.preventDefault();
+   });
+   $('a.description').click(function() {
+      var url = $(this).attr('href');
+      $('.content').load(url + " #description");    
+      return false;
+   });
+});
+</script>
+</head>
+<body>
+<a href="HTML.htm" class="tabs">HTML</a>
+<a href="JavaScript.htm" class="tabs">JavaScript</a>
+<a href="jQuery.htm" class="tabs">jQuery</a><br/>
+<a href="HTML.htm" class="description">HTML說明</a>
+<a href="JavaScript.htm" class="description">JavaScript說明</a>
+<a href="jQuery.htm" class="description">jQuery說明</a>
+<div class="content"></div>
+</body>
+</html>

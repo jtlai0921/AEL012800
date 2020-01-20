@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch9_3_3.htm</title>
+<style type="text/css">
+.hide { display: none; }
+.line { border: 1px solid #333; }
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('.header:has(p)').addClass('line');
+   $('.error:empty)').addClass('hide');
+});
+</script>
+</head>
+<body>
+<div>
+  <div class="header">
+    <p>JavaScript網頁設計</p>    
+  </div>
+  <div class="header">
+    <span>jQuery網頁設計</span>
+  </div>
+  <div class="header">
+    <span><p>Internet Explorer<p></span>
+  </div>
+  <div class="error"></div>
+  <div class="error"">顯示錯誤訊息...<div>
+</div>
+</body>
+</html>

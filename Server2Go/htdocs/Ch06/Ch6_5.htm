@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch6_5.htm</title>
+<script language="JavaScript">
+function setAlign(strAlign) {
+   var p = document.getElementById("myP");
+   p.align = strAlign;
+}
+function getAlign() {
+   var p = document.getElementsByTagName("p");
+   alert(p.item(0).align);
+}
+function switchAlign() {
+   var objEle = document.getElementsByTagName("p");
+   if (objEle[1].getAttribute("align") == "left")
+      objEle[1].setAttribute("align", "center");
+   else
+      objEle[1].setAttribute("align", "left");
+}
+</script>
+</head>
+<body id="myBody">
+<h2>存取HTML標籤的屬性</h2>
+<hr/>
+<p id="myP" align="left">存取HTML標籤的屬性1</p>
+<p align="left">存取HTML標籤的屬性2</p>
+<form>
+<input type="button" onclick="setAlign('center')" value="置中對齊">
+<input type="button" onclick="getAlign()" value="取得標籤屬性">
+<input type="button" onclick="switchAlign()" value="切換標籤屬性">
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch2_3_2.htm</title>
+</head>
+<body>
+<h2>算術運算子的使用</h2>
+<hr>
+<script language="JavaScript">
+var x, y;
+var intInc = 10;
+var intDec = 10;
+var strTitle1 = "JavaScript是"
+var strTitle2 = "一種網頁設計技術"
+document.write("負號運算: -7    = " + -7 + "<br/>");
+intInc++;
+document.write("遞增運算: A++ = " + intInc + "<br/>");
+intDec--;
+document.write("遞減運算: A-- = " + intDec + "<br/>");
+document.write("乘法運算: 5 * 6 = " + 5*6 + "<br/>");
+document.write("除法運算: 7 / 2 = " + 7/2 + "<br/>");
+document.write("餘數運算: 7 % 2 = " + 7%2 + "<br/>");
+document.write("加法運算: 4 + 3 = " + (4+3) + "<br/>"); 
+document.write("減法運算: 4 - 3 = " + (4-3) + "<br/><hr/>");
+// 測試Pre-/Post- 運算子
+x = 10;
+y = 10;
+document.write("x++ = " +x+++":x = " + x + "<br/>");
+document.write("--y = " +--y+":y = " + y + "<br/><hr/>");
+document.write("字串連接: " + (strTitle1+strTitle2) + "<br/>");
+</script>
+</body>
+</html>

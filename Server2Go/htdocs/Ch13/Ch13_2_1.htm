@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch13_2_1.htm</title>
+<style type="text/css">
+.yellow { background-color : yellow; }
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('#login :text:first').focus().addClass('yellow');
+   $('a.pass').click(function() {
+      $('#password').focus().addClass('yellow');   
+      return false;
+   });
+   $(':text').blur(function() {
+      $(this).removeClass('yellow');
+   });
+});
+</script>
+</head>
+<body>
+<div class="content">
+  <form method="post" id="login">
+     <div>
+       <label for="username">使用者名稱:</label>
+       <input type="text" id="username" size="20">
+     </div>
+     <div>
+       <label for="password">使用者密碼:</label>
+       <input type="text" id="password" size="20">
+     </div>
+     <hr/>
+     <a href="#" class="pass">密碼欄位取得焦點</a>
+  </form> 
+  <form method="post" id="memo">
+     <div>
+       <label for="msg">訊息:</label>
+       <input type="text" id="msg" size="30">
+     </div>     
+  </form>   
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch3_2_4.htm</title>
+</head>
+<body>
+<h2>測試switch多條件敘述</h2>
+<hr/>
+<script language="JavaScript">
+// 變數宣告
+var strPayment = "master";
+// 條件敘述
+switch (strPayment){
+    case "cash":
+        document.write("使用現金付款!<br/>");
+        break;
+    case "visa":
+        document.write("使用VISA信用卡付款!<br/>");
+        break;
+    case "master":
+        document.write("使用Master信用卡付款!<br/>");
+        break;
+    default:
+        document.write("未明的付款方式!<br/>");
+}
+</script>
+</body>
+</html>

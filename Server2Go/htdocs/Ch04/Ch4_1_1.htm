@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch4_1_1.htm</title>
+</head>
+<body>
+<script language="JavaScript">
+// 變數宣告
+var strMsg = "JavaScript與jQuery網頁設計範例教本"; 
+var strURLcode, strOriginal;
+strURLcode = escape(strMsg);  // 進行加碼
+document.write("原始字串 : " + strMsg + "<br/>");
+document.write("URL編碼 : " + strURLcode + "<br/>");
+strOriginal = unescape(strURLcode); // 還原字串
+document.write("還原的字串 : " + strOriginal + "<br/>");
+</script>
+</body>
+</html> 

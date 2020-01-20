@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch14_4_2.htm</title>
+<style type="text/css">
+.box {
+   width:100px;
+   background-color:#ffffff;
+   border:2px solid blue;
+   padding:10px;
+}
+</style> 
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $("form").submit( function() {
+      // 取得表單欄位值
+      var typeVal = $('#type').val();
+      var nameVal = $('#name').val();
+      // 使用HTTP POST方法送出Ajax請求
+      $.post('getDateTime.php',
+        { name : nameVal,
+          type : typeVal 
+        }, 
+        function(data) {
+           // 取出XML元素值
+           $('#result').html($(data).find('data').text());
+           alert("姓名: " + $(data).find('name').text());    
+        } 
+      );    
+      return false;
+   });
+});
+</script>
+</head>
+<body>
+<div id="result" class="box"></div><br/>
+<form>
+  <label>姓名: </label>
+  <input type="text" id="name"/><br/>
+  <select id="type">
+    <option value="date" selected>日期</option>
+    <option value="time">時間</option>
+  </select>
+  <input type="submit" value="送出">
+</form>
+</body>
+</html>

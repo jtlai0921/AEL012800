@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch4_5_4.htm</title>
+<script language="JavaScript">
+// 新增的物件方法
+function reverse_string() {
+   for (var i = (this.length-1); i >= 0; i--)
+      document.write(this.charAt(i));
+   document.write("<br/>");
+}
+// 新增的物件方法
+function even_string() {
+   var output = "";
+   for (var i = 0; i < this.length; i+=2)
+      output += this.charAt(i);
+   return output;
+}
+// 擴充物件方法
+String.prototype.reverse = reverse_string;
+String.prototype.even = even_string;
+</script>
+</head>
+<body>
+<h2>擴充JavaScript內建物件的方法</h2>
+<hr/>
+<script language="JavaScript">
+// 建立內建物件String
+var objMessage = new String("JavaScript網頁程式設計");
+document.write("原始字串: " + objMessage + "<br/>");
+// 執行物件方法
+objMessage.reverse();
+strOutput = objMessage.even();  // 執行物件方法
+document.write(strOutput + "<br/>");
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch7_4_2.htm</title>
+<style type="text/css">
+#bodycolor   { font-size: 12pt;
+               color: red; }
+.littlered   { color: red; 
+               font-size: 9pt}
+.bigred      { color: red; 
+               font-size: 14pt}
+h2 { font-size: 16pt; 
+     color: yellow;
+     background-color: blue;}
+</style>
+<script language="JavaScript">
+function setWhite() {
+  var objEle = document.getElementsByTagName("H2");
+  objEle[0].style.color= "white";
+}
+function setGreen() {
+  var b = document.getElementById("bodycolor");
+  b.style.color= "green";
+}
+function setLarge() {
+  var h = document.getElementById("myH2");
+  h.style.fontSize = "18pt";
+}
+function setSmall() {
+  var b = document.getElementById("bodycolor");
+  b.style.fontSize = "10pt";
+}
+function hideElement() {
+  var h = document.getElementById("myH2");
+  if (h.style.display == "none") 
+     h.style.display = "";
+  else
+     h.style.display = "none";
+}
+</script>
+</head>
+<body>
+<h2 id="myH2">動態CSS樣式的字型與色彩</h2>
+<hr/>
+<div id="bodycolor">動態樣式的字型與色彩</div>
+<p class="littlered" onmouseover="this.style.color='blue';"
+                     onmouseout="this.style.color='red';" 
+                     onclick="this.className='bigred';"
+>動態樣式的字型與色彩</p>
+<form>
+<input type="button" onclick="setWhite()" value="白色">
+<input type="button" onclick="setGreen()" value="綠色">
+<input type="button" onclick="setLarge()" value="放大">
+<input type="button" onclick="setSmall()" value="縮小">
+<input type="button" onclick="hideElement()" value="隱藏">
+</form>
+</body>
+</html>

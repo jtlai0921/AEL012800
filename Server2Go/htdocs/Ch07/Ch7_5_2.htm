@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch7_5_2.htm</title>
+<script language="JavaScript">
+function moveleft(){
+  var h = document.getElementById("myH2");
+  h.style.position = "absolute";
+  h.style.left = 0;
+}
+function moveback(){
+  var h = document.getElementById("myH2");
+  h.style.position = "relative";
+}
+</script>
+</head>
+<body>
+<h2 id="myH2" 
+onmouseover="moveleft()"
+onmouseout="moveback()">移動標題文字</h2>
+</body>
+</html>

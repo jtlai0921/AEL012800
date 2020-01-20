@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Ch2_3_4.htm</title>
+</head>
+<body>
+<h2>位元運算子的使用</h2>
+<hr>
+<script language="JavaScript">
+var intA = 1;  // 0001
+var intB = 2;  // 0010
+var intC = 3;  // 0011
+var intD = 16; // 1000
+document.write("NOT運算: ~A = " + (~intA) + "<br/>");
+document.write("左移運算: C << 2 = " + (intC<<2) + "<br/>");
+document.write("右移運算: B >> 1 = " + (intB>>1) + "<br/>"); 
+document.write("無符號右移運算: D >>> 1 = " + (intD>>>1) + "<br/>");
+document.write("AND運算: A & C = " + (intA & intC) + "<br/>");
+document.write("XOR運算: A ^ B = " + (intA ^ intB) + "<br/>");
+document.write("OR運算: A | B = " + (intA | intB) + "<br/>");
+</script>
+</body>
+</html>

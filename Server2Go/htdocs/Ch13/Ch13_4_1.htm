@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ch13_4_1.htm</title>
+<style type="text/css">
+a { text-decoration : none;
+    font-size : 20px;
+    border : 1px solid #333;  }
+.title { background-color : #DEDEDE; }
+</style>
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function() {
+   $('tr:even').addClass('title');
+   $('tr:odd').hide();
+   $('a').click(function() { 
+      var id = $(this).attr('href');          
+      if ( $(id).css('display') == 'none' ) {
+         $(id).slideDown('slow');
+         $(this).html('-');
+      } else {
+         $(id).slideUp('slow');
+         $(this).html('+');
+      }     
+      return false;     
+   });    
+});
+</script>
+</head>
+<body>
+<table border="1" width="300">
+<tr>
+   <td colspan="3"><a href="#client">+</a>
+   客戶端網頁技術</td>
+</tr>
+<tr id="client">
+   <td>JavaScript</td>
+   <td>Dynamic HTML</td>
+   <td>ActionScript</td>
+</tr>
+<tr>
+   <td colspan="3"><a href="#server">+</a>
+   伺服端網頁技術</td>
+</tr>   
+<tr id="server">   
+   <td>JSP</td>
+   <td>PHP</td>
+   <td>ASP</td>
+</tr>
+</div>
+<tr>
+   <td colspan="3"><a href="#microsoft">+</a>
+   微軟網頁技術</td>
+</tr>   
+<tr id="microsoft"> 
+   <td>VBScript</td>
+   <td>ASP</td>
+   <td>ASP.NET</td>
+</tr>
+</table>
+</body>
+</html> 
